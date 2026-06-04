@@ -90,6 +90,6 @@ if select== "Predict Price":
                 st.info(predic)
 
             existing_data=pd.read_csv("house_price_prediction.csv")
-            new_data=pd.DataFrame({"location":[location],"area_sqft":[area_sqft],"room":[rooms],"price":[predic]})
+            new_data=pd.DataFrame({"location":[location],"area_sqft":[area_sqft],"rooms":[rooms],"price":[predic]})
             updated_data=pd.concat([existing_data,new_data])
             updated_data.to_csv("house_price_prediction.csv",index=False)
